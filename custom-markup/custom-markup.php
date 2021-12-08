@@ -28,6 +28,16 @@ class CustomMarkup extends FLBuilderModule {
       return $markup;
     }
 
+    function get_loop_template($html ){
+      preg_match('/\[\[(.*?)\]\]/s',  $html, $matches);
+      return $matches[1];
+    }
+    
+    function insert_loop($markup, $loop_markup){
+      return preg_replace('/\[\[(.*?)\]\]/s', $loop_markup, $markup);
+    }
+
+
 }
 
 
