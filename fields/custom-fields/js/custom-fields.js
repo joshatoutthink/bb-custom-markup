@@ -35,7 +35,7 @@ function check() {
   if (
     document
       .querySelector(".fl-builder-settings")
-      .classList.contains("fl-builder-custom-markup-settings")
+      ?.classList.contains("fl-builder-custom-markup-settings")
   ) {
     setTimeout(() => {
       if (document.querySelector(".commander-custom-fields")) {
